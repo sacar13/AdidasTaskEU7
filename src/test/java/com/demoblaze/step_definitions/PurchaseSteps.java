@@ -14,6 +14,7 @@ public class PurchaseSteps {
 
     ProductPage productPage = new ProductPage();
     PlaceOrderPage placeOrder = new PlaceOrderPage();
+    int expectedPurchaseAmount;
 
     @Given("User is on the home page")
     public void user_is_on_the_home_page() {
@@ -37,6 +38,8 @@ public class PurchaseSteps {
     @And("User clicks on place order")
     public void userClicksOnPlaceOrder() {
         productPage.cart.click();
+        expectedPurchaseAmount = Integer.parseInt(productPage.totalPrice.getText());
+
         productPage.placeOrder.click();
     }
 
@@ -55,6 +58,8 @@ public class PurchaseSteps {
 
         int actualPurchaseAmount = Integer.parseInt(orderDetailsText.split("\n")[1].split(" ")[1]);
         System.out.println("actualPurchaseAmount = " + actualPurchaseAmount);
+
+
 
     }
 }
