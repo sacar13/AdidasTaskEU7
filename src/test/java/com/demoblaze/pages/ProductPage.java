@@ -14,6 +14,15 @@ public class ProductPage extends BasePage{
     @FindBy(xpath = "//a[.='Add to cart']")
     public WebElement addToCartElement;
 
+    @FindBy(xpath = "//tbody//td[contains(.,'Sony vaio i5')]/../td[4]/a")
+    public WebElement sonyVaioI5Delete;
+
+    public void deleteProduct(String product){
+        String locator = "//tbody//td[contains(.,'"+product+"')]/../td[4]/a";
+
+
+    }
+
     public void navigateTo(String product, String category){
         Driver.get().findElement(By.linkText(category)).click();
         Driver.get().findElement(By.linkText(product)).click();
