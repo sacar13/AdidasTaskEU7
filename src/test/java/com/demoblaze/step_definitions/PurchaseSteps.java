@@ -26,6 +26,7 @@ public class PurchaseSteps {
     @And("User navigates to cart and removes {string}")
     public void userNavigatesToCartAndRemoves(String product) {
         productPage.cart.click();
+        productPage.deleteProduct(product);
 
     }
 }
