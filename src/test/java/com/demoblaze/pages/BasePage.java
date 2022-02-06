@@ -11,7 +11,7 @@ public abstract class BasePage {
     }
 
 
-    @FindBy(xpath = "//a[.='Home']")
+    @FindBy(xpath = "//a[contains(.,'Home')]")
     public WebElement home;
     @FindBy(xpath = "//a[.='Cart']")
     public WebElement cart;
