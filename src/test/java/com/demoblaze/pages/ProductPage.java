@@ -16,7 +16,6 @@ public class ProductPage extends BasePage{
 
     @FindBy(xpath = "//tbody//td[contains(.,'Sony vaio i5')]/../td[4]/a")
     public WebElement sonyVaioI5Delete;
-
     public void deleteProduct(String product){
         String locator = "//tbody//td[contains(.,'"+product+"')]/../td[4]/a";
         Driver.get().findElement(By.xpath(locator)).click();
@@ -37,5 +36,9 @@ public class ProductPage extends BasePage{
         Alert alert = Driver.get().switchTo().alert();
         alert.accept();
     }
+
+    @FindBy(xpath = "//button[.='Place Order']")
+    public WebElement placeOrder;
+
 
 }
