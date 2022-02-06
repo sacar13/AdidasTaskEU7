@@ -59,7 +59,8 @@ public class PurchaseSteps {
         int actualPurchaseAmount = Integer.parseInt(orderDetailsText.split("\n")[1].split(" ")[1]);
         System.out.println("actualPurchaseAmount = " + actualPurchaseAmount);
 
+        Assert.assertEquals("Price is NOT as expected",expectedPurchaseAmount,actualPurchaseAmount);
 
-
+        // in TestNG (actual,expected,message
     }
 }
