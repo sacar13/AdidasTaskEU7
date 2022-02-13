@@ -12,7 +12,7 @@ Feature: Adidas Order Placement Functionalities
     And User clicks on place order
     And User fills the form for order and clicks on purchase button
     Then Order ID and order amount should be as expected
-
+  @smoke
   Scenario: Verify all the products exist in the products pages
     Then Under "Phones" category User should be to see the list of following products
       | Samsung galaxy s6 |
@@ -30,10 +30,10 @@ Feature: Adidas Order Placement Functionalities
       | 2017 Dell 15.6 Inch |
       | MacBook Pro         |
     Then Under "Monitors" category User should be to see the list of following products
-      | Apple monitor 24 |
+      | Apple monitor 2  |
       | ASUS Full HD     |
 
-  @wip
+
   Scenario Outline: User checks different laptops can be added to cart <differentLaptops>
     Then User adds "<differentLaptops>" from "Laptops"
     Examples:
